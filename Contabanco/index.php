@@ -42,6 +42,8 @@
 */
 
 
+    $p1->abrirConta();
+
 
 
      print_r($p1);

@@ -20,27 +20,17 @@ class ContaPoupanca implements Conta
     }
 
     public function abrirConta(){
-
-        $this->setStatus(true);
+     
+     
+     $this->setSaldo(150);
     
-        if ($this->getTipo() == 'CP' ){
-         
-            $this->setSaldo(150);
+        
+     }
     
-    
-    
-    
-        }
-    
-        else{
-    
-            echo 'Tipo de Conta Inexistente' ;
-        }
+      
     
     
-    
-        }
-    
+            
     
     
     

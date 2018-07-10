@@ -18,9 +18,16 @@ class ContaCorrente implements Conta
     }
 
     public function abrirConta(){
-        echo 'Abrir Conta';
-
-    }
+        $this->setStatus(true);
+        $this->setSaldo(150);
+         
+        }
+    
+  
+    
+    
+     
+    
     public function fecharConta(){
         echo 'Fechar Conta';
 

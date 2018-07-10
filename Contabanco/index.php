@@ -12,20 +12,21 @@
     <h1>
     <pre>
     <?php
-     require 'ContaBanco.php';
+     //require 'ContaCorrente.php';
+     require 'ContaPoupanca.php';
 
-     $p1 = new ContaBanco; // Jubeliu
-     $p2 = new ContaBanco;  // Creuza
+    // $p1 = new ContaCorrente; // Jubeliu
+     $p2 = new ContaPoupanca;  // Creuza
+
+     var_dump($p2);die();
 
 
-     $p1->abrirConta('CC');
-     $p1->setnumConta(11111);
-     $p1->setDono('Jubileu');
+    $p1->setnumConta(11111);
+    $p1->setDono('Jubileu');
     $p1->depositar(300);
 
 
      
-     $p2->abrirConta('CP');
      $p2->setnumConta(22222);
      $p2->setDono('Creuza');
      $p2->depositar(500);

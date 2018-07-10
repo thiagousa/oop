@@ -68,68 +68,7 @@ class ContaPoupanca implements Conta
     
     }
     }
-    public function  depositar($valor){
-    
-        if ($this->getStatus()) {
-    
-            $this->setSaldo($this->getSaldo()+$valor);
-         echo "<p> Valor depositado de {$valor} na conta de {$this->getDono()} </p>";
-    
-        }
-    
-        else{
-    
-            echo 'Conta fechada nao posso depositar';
-        }
-    
-    
-    }
-    public function sacar($valor){
-    
-        if ($this->getStatus()) {
-    
-            if ($this->getSaldo() >= $valor) {
-    
-                $this->setSaldo($this->getSaldo() - $valor);
-    
-                echo "<p> Valor sacado de {$valor} na conta de {$this->getDono()} </p>";
-                
-            
-    
-            } else {
-                echo 'Valor maior que o Saldo';
-            }
-            
-            # code...
-        } else {
-            echo 'Nao posso Sacar de uma conta fechada';
-            # code...
-        }
-        
-    
-    
-    
-    }
-    public function pagarMensal(){
-    
-  
-        $valor = 20;
-       
-        if ($this->getStatus()){
-    
-            $this->setSaldo($this->getSaldo() - $valor);
-    
-            echo "<p> Valor da mensalidade cobrada no {$valor} na conta de {$this->getDono()} </p>";
-        }
-          
-        else {
-            echo 'Something Wrog!!! ';
-        }
-        
-        
-    
-    
-    }
+
     
     
     public function setnumConta($numConta){

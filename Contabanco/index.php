@@ -12,14 +12,13 @@
     <h1>
     <pre>
     <?php
-     //require 'ContaCorrente.php';
-     require 'ContaPoupanca.php';
+     require 'ContaCorrente.php';
+     //require 'ContaPoupanca.php';
 
-    // $p1 = new ContaCorrente; // Jubeliu
-     $p2 = new ContaPoupanca;  // Creuza
+     $p1 = new ContaCorrente; // Jubeliu
+    // $p2 = new ContaPoupanca;  // Creuza
 
-     var_dump($p2);die();
-
+   /*
 
     $p1->setnumConta(11111);
     $p1->setDono('Jubileu');
@@ -40,14 +39,14 @@
 
      $p1->fecharConta();
      $p2->fecharConta();
-
+*/
 
 
 
 
      print_r($p1);
 
-     print_r($p2);
+  //   print_r($p2);
 
  
 

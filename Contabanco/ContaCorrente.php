@@ -17,117 +17,26 @@ class ContaCorrente implements Conta
         echo '<p>Conta Corrente Criada com Sucesso</p>';
     }
 
-
     public function abrirConta(){
+        echo 'Abrir Conta';
 
-        
-        $this->setStatus(true);
-    
-        if($this->getTipo() =='CC')
-        
-        {
-    
-           $this->setSaldo(50);
-    
-            
-    
-        }
-          
-        else{
-    
-            echo 'Tipo de Conta Inexistente' ;
-        }
-    
-    
-    
-        }
-    
-    
-    
-    
+    }
     public function fecharConta(){
-    
-        if ($this->getSaldo() > 0) {
-            echo " <p> Conta ainda tem dinheiro nao pode ser fechada </p>";
-        } 
-        
-        
-        elseif ($this->getSaldo() < 0) {
-    
-            echo "<p> Conta esta com debitos nao pode ser fechada</p>";
-       
-        }
-        
-        
-        
-        else {
-            $this->setStatus(false);
-    
-            echo "<p> Conta do  {$this->getDono()}  Fechada !!!</p>";
-        
-    
-    
+        echo 'Fechar Conta';
+
     }
+    public function depositar(){
+        echo 'Depositar Conta';
+
     }
-    public function  depositar($valor){
-    
-        if ($this->getStatus()) {
-    
-            $this->setSaldo($this->getSaldo()+$valor);
-         echo "<p> Valor depositado de {$valor} na conta de {$this->getDono()} </p>";
-    
-        }
-    
-        else{
-    
-            echo 'Conta fechada nao posso depositar';
-        }
-    
-    
-    }
-    public function sacar($valor){
-    
-        if ($this->getStatus()) {
-    
-            if ($this->getSaldo() >= $valor) {
-    
-                $this->setSaldo($this->getSaldo() - $valor);
-    
-                echo "<p> Valor sacado de {$valor} na conta de {$this->getDono()} </p>";
-                
-            
-    
-            } else {
-                echo 'Valor maior que o Saldo';
-            }
-       
-        } else {
-            echo 'Nao posso Sacar de uma conta fechada';
-         
-        }
-        
-    
-    
-    
+    public function sacar(){
+        echo 'Sacar Conta';
+
     }
     public function pagarMensal(){
-    
-        $valor = 12;
-      
-        if ($this->getStatus()){
-    
-            $this->setSaldo($this->getSaldo() - $valor);
-    
-            echo "<p> Valor da mensalidade cobrada no {$valor} na conta de {$this->getDono()} </p>";
-        }
-          
-        else {
-            echo 'Something Wrog!!! ';
-        }
-        
-        
-    
-    
+        echo 'Pagar Conta';
+
+
     }
     
     

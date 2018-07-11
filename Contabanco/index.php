@@ -12,43 +12,34 @@
     <h1>
     <pre>
     <?php
-     require 'ContaCorrente.php';
-     //require 'ContaPoupanca.php';
+     //require 'ContaCorrente.php';
+     require 'ContaPoupanca.php';
 
-     $p1 = new ContaCorrente; // Jubeliu
-    // $p2 = new ContaPoupanca;  // Creuza
+    // $p1 = new ContaCorrente; // Jose
+     $p2 = new ContaPoupanca;  // Maria
 
-   /*
+    /* $p1->abrirConta();
+     $p1->addDono('Jose');
+     $p1->addNumero(111111);
+     $p1->depositar(200);
+     $p1->pagarMensal();
+     $p1->sacar(350);
+     $p1->fecharConta(); */
 
-    $p1->setnumConta(11111);
-    $p1->setDono('Jubileu');
-    $p1->depositar(300);
-
-
-     
-     $p2->setnumConta(22222);
-     $p2->setDono('Creuza');
-     $p2->depositar(500);
-     $p2->sacar(100);
-
-     $p1->pagarMensalidade();
-     $p2->pagarMensalidade();
-
-     $p1->sacar(338);
-     $p2->sacar(530);
-
-     $p1->fecharConta();
-     $p2->fecharConta();
-*/
-
-
-    $p1->abrirConta();
+    $p2->abrirConta();
+    $p2->addDono('Maria');
+    $p2->addNumero(22222222);
+    $p2->depositar(500);
+    $p2->pagarMensal();
+    $p2->sacar(650);
+    $p2->pagarMensal();
+    $p2->fecharConta();
 
 
 
-     print_r($p1);
+     //print_r($p1);
 
-  //   print_r($p2);
+     print_r($p2);
 
  
 

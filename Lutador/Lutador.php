@@ -16,19 +16,31 @@ Class Lutador implements Padrao {
 
     /**
      * Lutador constructor.
+     * @param $nome
+     * @param $nacionalidade
+     * @param $idade
+     * @param $altura
+     * @param $peso
+     * @param $vitorias
+     * @param $derrotas
+     * @param $empates
      */
-    public function __construct()
+    public function __construct($nome, $nacionalidade, $idade, $altura, $peso, $vitorias, $derrotas, $empates)
     {
-
-        $this->nome = 'no';
-        $this->nacionalidade = 'na';
-        $this->idade = 'id';
-        $this->altura = 'al';
-        $this->vitorias = 'vi';
-        $this->derrotas = 'de';
-        $this->empates = 'em';
-
+        $this->nome = $nome;
+        $this->nacionalidade = $nacionalidade;
+        $this->idade = $idade;
+        $this->altura = $altura;
+        $this->setPeso($peso);
+        $this->vitorias = $vitorias;
+        $this->derrotas = $derrotas;
+        $this->empates = $empates;
     }
+
+    /**
+     * Lutador constructor.
+     */
+
 
     /**
      * @return string
@@ -125,27 +137,27 @@ Class Lutador implements Padrao {
     /**
      * @param mixed $categoria
      */
-    public function setCategoria()
+    private function setCategoria()
 
 
     {
 
-        if($this->getPeso()<52.2){
+        if($this->peso < 52.2){
             echo'Invalido';
         }
-        if ($this->getPeso()<=70.3){
+        elseif ($this->peso <= 70.3){
 
-            $this->setCategoria('Leve');
-
-        }
-        if ($this->getPeso()<=83.9){
-
-            $this->setCategoria('Medio');
+            $this->categoria= 'Leve';
 
         }
-        if ($this->getPeso()<=120.2){
+        elseif ($this->peso <= 83.9){
 
-            $this->setCategoria('Pesado');
+            $this->categoria= 'Medio';
+
+        }
+        elseif ($this->peso <= 120.2){
+
+            $this->categoria = 'Pesado';
 
         }
         else{
@@ -217,6 +229,7 @@ Class Lutador implements Padrao {
         echo '<p>Origem:'.$this->getNacionalidade().'</p>';
         echo '<p>Idade:'.$this->getIdade().'</p>';
         echo '<p>Pesando:'.$this->getPeso().'</p>';
+        echo '<p>Categoria:'.$this->categoria.'</p>';
         echo '<p>Ganhou:'.$this->getVitorias().'</p>';
         echo '<p>Perdeu:'.$this->getDerrotas().'</p>';
         echo '<p>Empatou:'.$this->getEmpates().'</p>';
@@ -228,7 +241,7 @@ Class Lutador implements Padrao {
     {
         echo '<p> ------ Status ---- </p>';
         echo '<p>Lutador:'.$this->getNome().'</p>';
-        echo '<p>Pesando:'.$this->getPeso().'Categoria:'.$this->getCategoria().'</p>';
+        echo '<p>Pesando:'.$this->getPeso().'E sua Categoria e '.$this->getCategoria().'</p>';
         echo '<p>Ganhou:'.$this->getVitorias().'</p>';
         echo '<p>Perdeu:'.$this->getDerrotas().'</p>';
         echo '<p>Empatou:'.$this->getEmpates().'</p>';

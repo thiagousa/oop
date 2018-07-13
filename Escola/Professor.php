@@ -6,7 +6,8 @@
  * Time: 11:04 PM
  */
 
-require 'Pessoa.php';
+include_once  'Pessoa.php';
+
 class Professor extends Pessoa
 {
     private $especialidade;

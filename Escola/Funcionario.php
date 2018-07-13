@@ -6,7 +6,8 @@
  * Time: 11:05 PM
  */
 
-require 'Pessoa.php';
+include_once 'Pessoa.php';
+
 class Funcionario extends Pessoa
 {
 

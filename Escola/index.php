@@ -9,10 +9,9 @@
 <body>
 <pre>
 <?php
+require_once __DIR__ .'/vendor/autoload.php';
 
-include_once 'Aluno.php';
-include_once 'Professor.php';
-include_once  'Funcionario.php';
+
 
 $a = new Aluno();
 $p = new Professor();

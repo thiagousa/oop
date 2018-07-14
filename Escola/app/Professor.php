@@ -6,7 +6,7 @@
  * Time: 11:04 PM
  */
 
-include_once  'Pessoa.php';
+include_once 'Pessoa.php';
 
 class Professor extends Pessoa
 {

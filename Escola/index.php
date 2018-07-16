@@ -9,7 +9,12 @@
 <body>
 <pre>
 <?php
-require_once __DIR__ .'/vendor/autoload.php';
+
+require_once "vendor/autoload.php";
+
+use app\classes\Aluno;
+use app\classes\Professor;
+use app\classes\Funcionario;
 
 
 

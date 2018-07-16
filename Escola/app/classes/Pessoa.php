@@ -5,6 +5,7 @@
  * Date: 7/12/18
  * Time: 11:04 PM
  */
+namespace app\classes;
 
 class Pessoa
 {

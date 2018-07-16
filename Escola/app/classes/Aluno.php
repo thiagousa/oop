@@ -6,7 +6,8 @@
  * Time: 11:04 PM
  */
 
-include_once 'Pessoa.php';
+namespace app\classes;
+
 
 class Aluno extends Pessoa
 {

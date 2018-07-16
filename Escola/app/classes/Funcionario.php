@@ -6,7 +6,9 @@
  * Time: 11:05 PM
  */
 
-include_once 'Pessoa.php';
+namespace app\classes;
+
+
 
 class Funcionario extends Pessoa
 {

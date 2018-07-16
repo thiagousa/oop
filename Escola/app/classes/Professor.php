@@ -6,9 +6,11 @@
  * Time: 11:04 PM
  */
 
-include_once 'Pessoa.php';
+namespace app\classes;
+
 
 class Professor extends Pessoa
+
 {
     private $especialidade;
     private $salario;
